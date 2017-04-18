@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="<: $srclang :>" datatype="plaintext" creationtoolversion="4.0.1_0_9319:9320" segtype="sentence" srclang="<: $targetlang :>"/>
+  <body>
+  : for $segments -> $segment {
+    <tu>
+      <tuv xml:lang="<: $srclang :>">
+        <seg><: $segment.srcbody :></seg>
+      </tuv>
+      <tuv xml:lang="<: $targetlang :>" creationid="Text::Xslate" creationdate="<: $created_at :>">
+        <seg><: $segment.targetbody :></seg>
+      </tuv>
+    </tu>
+  :}
+  </body>
+</tmx>
